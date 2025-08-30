@@ -38,19 +38,19 @@ public class Libro {
     public void prestito() {
         if(disponibile) {
             disponibile = false;
-            System.out.println("\nHai preso in prestito: " + titolo + "\n");
+            System.out.println("\nHai preso in prestito: " + titolo);
 
         } else {
-            System.out.println("\nLibor non e' disponibile.\n");
+            System.out.println("\nLibro non e' disponibile.");
         }
     }
 
     public void restituzione() {
         if(!disponibile){
             disponibile = true;
-            System.out.println("\nGrazie per avere restituito il libro.\n");
+            System.out.println("\nGrazie per avere restituito il libro");
         } else {
-            System.out.println("\nImpossibile restituire il libro.\n");
+            System.out.println("\nIl libro non era stato prestato.");
         }
     }
 
