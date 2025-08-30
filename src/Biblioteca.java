@@ -4,7 +4,7 @@ public class Biblioteca {
     private int numeroLibri = 0;
 
     {
-        System.out.println("Biblioteca creata");
+        System.out.println("\nBiblioteca creata");
     }
 
     public Biblioteca() { }
@@ -17,29 +17,29 @@ public class Biblioteca {
         }
     }
 
+    public void aggiungiPiuLibri (Libro... libriDaAggiungere) {
+        for (Libro l : libriDaAggiungere) {
+            aggiungiLibro(l);
+        }
+    }
+
     public void cercaLibro (String titolo) {
+        System.out.println();
         for (int i = 0; i < numeroLibri; i++) {
-            if(libri[i].getTitolo() != null && libri[i].getTitolo().equals(titolo)) {
-                System.out.println("Il libro e' stato trovato:");
-                System.out.println(libri[i]);
+            if(libri[i].getTitolo() != null && libri[i].getTitolo().equalsIgnoreCase(titolo)) {
+                System.out.println("Il libro e' stato trovato:  " + libri[i]);
                 return;
             }
         }
-        System.out.println("Libro non trovato");
+        System.out.println("Libro \"" + titolo + "\" non trovato");
     }
 
     public void stampaLibri () {
 
-        System.out.println("Lista dei libri in biblioteca:");
+        System.out.println("\n\nLista dei libri in biblioteca:");
 
         for (int i = 0; i < numeroLibri; i++) {
             System.out.println(libri[i]);
-        }
-    }
-
-    public void aggiungiPiuLibri (Libro... libriDaAggiungere) {
-        for (Libro l : libriDaAggiungere) {
-            aggiungiLibro(l);
         }
     }
 
