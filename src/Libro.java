@@ -38,7 +38,8 @@ public class Libro {
     public void prestito() {
         if(disponibile) {
             disponibile = false;
-            System.out.println("\nHai preso il libro in prestito.\n");
+            System.out.println("\nHai preso in prestito: " + titolo + "\n");
+
         } else {
             System.out.println("\nLibor non e' disponibile.\n");
         }
